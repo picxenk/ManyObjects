@@ -4,7 +4,7 @@ class Mover {
     this.vel = createVector();
     this.acc = createVector();
     this.m = m;
-
+    this.c = color(random(200, 255), random(200, 255), 0);
   }
 
   applyForce(aForce) {
@@ -30,7 +30,7 @@ class Mover {
   }
 
   drawOn(c) {
-    c.fill(250, 250, 0, 50);
+    c.fill(this.c);
     c.noStroke();
     c.circle(this.pos.x, this.pos.y, this.vel.mag()*5);
   }
