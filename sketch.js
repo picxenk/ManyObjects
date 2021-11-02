@@ -15,7 +15,7 @@ function setup() {
 }
 
 function draw() {
-  background(220);
+  background(240);
   image(canvas, 0, 0);
 
   for (let mover of movers) {
