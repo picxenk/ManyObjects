@@ -1,8 +1,10 @@
 let m, m2;
 let movers = [];
+let canvas;
 
 function setup() {
   createCanvas(400, 400);
+  canvas = createGraphics(400, 400);
   m = new Mover(50, 50, 10);
   m2 = new Mover(300, 300, 50);
 
@@ -14,10 +16,12 @@ function setup() {
 
 function draw() {
   background(220);
+  image(canvas, 0, 0);
 
   for (let mover of movers) {
     mover.update();
     mover.show();
+    mover.drawOn(canvas);
   }
 
 
