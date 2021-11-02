@@ -3,13 +3,13 @@ let movers = [];
 let canvas;
 
 function setup() {
-  createCanvas(400, 400);
-  canvas = createGraphics(400, 400);
+  createCanvas(800, 400);
+  canvas = createGraphics(width, height);
   m = new Mover(50, 50, 10);
   m2 = new Mover(300, 300, 50);
 
   for (let i=0; i<5; i++) {
-    let mover = new Mover(random(400), random(400), random(5, 50));
+    let mover = new Mover(random(width), random(height), random(5, 50));
     movers.push(mover);
   }
 }
