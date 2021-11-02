@@ -9,7 +9,7 @@ function setup() {
   m2 = new Mover(300, 300, 50);
 
   for (let i=0; i<5; i++) {
-    let mover = new Mover(random(width), random(height), random(5, 50));
+    let mover = new Mover(random(width), random(height), random(10, 50));
     movers.push(mover);
   }
 }
